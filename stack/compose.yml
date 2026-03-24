@@ -1,0 +1,8 @@
+include:
+  - path: ./vaultwarden.yml
+  - path: ./postfixrelay.yml
+
+networks:
+  tunnel-net:
+    name: tunnel-net
+    external: true
