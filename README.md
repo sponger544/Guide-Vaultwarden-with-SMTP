@@ -130,6 +130,7 @@ Once you have done so, you can bring the compose file up with `docker compose up
 
 
 ## Proton SMTP Compose File
+---
 
 This is very similar to Gmail, except we will follow [these instructions.](https://proton.me/support/smtp-submission) There is a lot going on, so let's break it down.
 
@@ -169,6 +170,7 @@ networks:
 ```
 
 ### Protonmail SMTP Configuration
+---
 
 Let's make sure we have SMTP set up correctly per [these instructions.](https://proton.me/support/smtp-submission#:~:text=on%20your%20computer.-,How%20to%20set%20up%20SMTP,-In%20your%20browser)
 
