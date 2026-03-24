@@ -35,7 +35,7 @@ Or you can create a temporary container by inputting the following CLI command. 
 
 `docker run --rm -it vaultwarden/server /vaultwarden hash`
 
-We will then take this password and put it in our `.env` file. This is a generated password of "password"
+We will then take this password and put it in our `.env` file.
 
 ```.env
 ADMIN_TOKEN='$argon2id$v=19$m=65540,t=3,p=4$YHwTNF0/SHe/k59bODwuFb/bvSgboFgMimgBb3qQozY$Yjs52CdQSePecKuV7sbdLttZeNcpt3YUed1FVMxTqlc'
@@ -198,3 +198,5 @@ Okay, now let's link vaultwarden to our new SMTP provider. Our SMTP should be co
 ![Vaultwarden SMTP Configuration](images/vwsmtp.png)
 
 Send a test message and verify that everything works! You can use the same configuration for any other SMTP profile. For some, you may have to configure the Host IP as 172.20.0.1:25 if there is no port option.
+
+If you want to disable the admin page, make sure you delete the ADMIN_PASS environment variable, and also remove it from the config.json as stated in the [vaultwarden github](https://github.com/dani-garcia/vaultwarden/wiki/Enabling-admin-page#:~:text=Disabling%20the%20admin%20page)
