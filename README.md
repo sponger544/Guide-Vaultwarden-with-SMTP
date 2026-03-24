@@ -35,10 +35,10 @@ Or you can create a temporary container by inputting the following CLI command. 
 
 `docker run --rm -it vaultwarden/server /vaultwarden hash`
 
-We will then take this password and put it in our `.env` file.
+We will then take this password and put it in our `.env` file. This is a generated password of "password"
 
 ```.env
-ADMIN_TOKEN=admin_token
+ADMIN_TOKEN='$argon2id$v=19$m=65540,t=3,p=4$YHwTNF0/SHe/k59bODwuFb/bvSgboFgMimgBb3qQozY$Yjs52CdQSePecKuV7sbdLttZeNcpt3YUed1FVMxTqlc'
 ```
 
 Okay great, Vaultwarden container set up. Let's test this at the admin domain by going to `https://vw.domain.com/admin`. If you want to keep the admin page open permanently, I recommend protecting it with Tinyauth. We can set the following in the `NPM NGINX Custom Configuration` window:
@@ -130,7 +130,6 @@ Once you have done so, you can bring the compose file up with `docker compose up
 
 
 ## Proton SMTP Compose File
----
 
 This is very similar to Gmail, except we will follow [these instructions.](https://proton.me/support/smtp-submission) There is a lot going on, so let's break it down.
 
@@ -170,7 +169,6 @@ networks:
 ```
 
 ### Protonmail SMTP Configuration
----
 
 Let's make sure we have SMTP set up correctly per [these instructions.](https://proton.me/support/smtp-submission#:~:text=on%20your%20computer.-,How%20to%20set%20up%20SMTP,-In%20your%20browser)
 
